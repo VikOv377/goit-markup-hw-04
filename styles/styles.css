@@ -12,7 +12,11 @@
     --gap-after-h2: 50px;
     --card-gap-top: 30px;
     --card-gap-left: 30px;
-
+    --team-social-icons: #AFB1B8;
+    --team-social-gap-left: 10px;
+    --team-social-gap-top: 10px;
+    --our-clients-gap-top: 30px;
+    --our-clients-gap-left:30px;
 }
 
 body {
@@ -156,6 +160,9 @@ img {
 .contacts {
     display: flex;
     margin-left: auto;
+
+    align-items: baseline;
+    justify-content: center;
 }
 
 /*.contacts .contacts-list-item {
@@ -262,14 +269,16 @@ img {
     overflow: hidden;
 }
 
-.about-us-header-h3 {
+.about-us-header {
+    color: var(--black-text-color);
+    margin-bottom: 10px;
+}
+
+.header-h3 {
     font-size: 14px;
     font-weight: 700;
     line-height: 1.14;
     text-transform: uppercase;
-    color: var(--black-text-color);
-
-    margin-bottom: 10px;
 }
 
 .about-us-list-item {
@@ -278,6 +287,15 @@ img {
     margin-top: var(--card-gap-top);
 
     /*Формула для использования со свойством gap: width: calc((100% - 3*var(--card-gap-left)) / 4);*/
+}
+
+.about-us-label {
+    width: 270px;
+    height: 120px;
+    background-color: var(--color-our-team-section);
+    border-radius: 4px;
+    padding: 25px 100px;
+    margin-bottom: 30px;
 }
 
 /* Секция "Чем мы занимаемся" */
@@ -308,8 +326,6 @@ img {
     0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
 
-    padding-bottom: 30px;
-
     width: calc(100% / 4 - var(--card-gap-left));
     
     margin-left: var(--card-gap-left);
@@ -329,9 +345,94 @@ img {
     margin-bottom: 10px;
 }
 
+.our-team-job {
+    margin-bottom: 16px;
+}
+
+.our-team-align {
+    padding: 30px 32px;
+}
+
 .our-team-image {
     margin-top: 0;
-    margin-bottom: 30px;
+    margin-bottom: 0;
+}
+
+.our-team-social-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+
+    margin-left: calc(-1 * var(--team-social-gap-left));
+    margin-top: calc(-1 * var(--team-social-gap-top));
+}
+
+.our-team-social-item {
+    width: calc(100% / 4 - var(--team-social-gap-left));
+
+    margin-left: var(--team-social-gap-left);
+    margin-top: var(--team-social-gap-top);
+}
+
+.our-team-social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: var(--team-social-icons);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+}
+
+.our-team-social-link:hover,
+.our-team-social-link:focus {
+    background-color: var(--blue-color);
+    color: var(--white-text-color);
+}
+
+.our-team-social-icon {
+    fill: currentColor;
+}
+
+/* Секция "Постоянные клиенты" */
+
+.regular-clients-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+
+    margin-left: calc(-1 * var(--our-clients-gap-left));
+    margin-top: calc(-1 * var(--our-clients-gap-top));
+}
+
+.regular-clients-item {
+    width: calc(100% / 6 - var(--our-clients-gap-left));
+
+    margin-left: var(--our-clients-gap-left);
+    margin-top: var(--our-clients-gap-top);
+}
+
+.regular-clients-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: var(--team-social-icons);
+    width: 170px;
+    height: 92px;
+    border-radius: 4px;
+    border: 1px solid var(--team-social-icons);
+}
+
+.regular-clients-link:hover,
+.regular-clients-link:focus {
+    color: var(--color-hover);
+    border: 1px solid var(--color-hover);
+}
+
+.clients-icon {
+    fill: currentColor;
 }
 
 /* Футер */
@@ -381,6 +482,57 @@ img {
 
 .footer-adress-list .footer-adress-item:not(:last-child) {
     margin-bottom: 9px;
+}
+
+.footer-header {
+    color: var(--white-text-color);
+    margin-bottom: 20px;
+}
+
+.footer-sections {
+    display: flex;
+}
+
+.footer-adress-part {
+    margin-right: 70px;
+}
+
+.footer-social-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+
+    margin-left: calc(-1 * var(--team-social-gap-left));
+    margin-top: calc(-1 * var(--team-social-gap-top));
+}
+
+.footer-social-item {
+    width: calc(100% / 4 - var(--team-social-gap-left));
+
+    margin-left: var(--team-social-gap-left);
+    margin-top: var(--team-social-gap-top);
+}
+
+.footer-social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: var(--white-text-color);
+    width: 44px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+}
+
+.footer-social-link:hover,
+.footer-social-link:focus {
+    background-color: var(--blue-color);
+    color: var(--white-text-color);
+}
+
+.footer-social-icon {
+    fill: currentColor;
 }
 
 /* --------------------PAGE "PORTFOLIO"-------------------- */ 
