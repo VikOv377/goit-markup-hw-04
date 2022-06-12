@@ -160,8 +160,6 @@ img {
 .contacts {
     display: flex;
     margin-left: auto;
-
-    align-items: baseline;
     justify-content: center;
 }
 
@@ -182,8 +180,9 @@ img {
     color: var(--color-hover);
 }
 
-.contacts .link {
-    display: block;
+.contacts-link {
+    display: flex;
+    align-items: center;
     padding-top: 32px;
     padding-bottom: 32px;
 }
@@ -491,6 +490,7 @@ img {
 
 .footer-sections {
     display: flex;
+    align-items: baseline;
 }
 
 .footer-adress-part {
@@ -611,6 +611,14 @@ img {
 
     margin-left: var(--card-gap-left);
     margin-top: var(--card-gap-top);
+}
+
+.our-projects-list-item:hover,
+.our-projects-list-item:focus {
+    box-shadow: 
+    0px 1px 1px rgba(0, 0, 0, 0.12),
+    0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .project-category {
