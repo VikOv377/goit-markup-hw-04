@@ -420,6 +420,10 @@ img {
     padding-bottom: 60px;
 }
 
+.footer-part:not(:last-child) {
+    margin-right: 70px;
+}
+
 .logo-white {
     color: var(--white-text-color);
 }
@@ -468,10 +472,6 @@ img {
 .footer-sections {
     display: flex;
     align-items: baseline;
-}
-
-.footer-part:not(:last-child) {
-    margin-right: 70px;
 }
 
 .footer-social-icon {
